@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif !important;
+}
+
+body {
+  background-color: $background-blue;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -1,0 +1,81 @@
+<div class="section">
+    <div class="row">
+        <div class="col-md-12 section-card">
+            <div class="row">
+                <div class="heading">App Recorded Video</div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+                <div class="accordion" id="advSetAccordion">
+                    <div class="card">
+                        <div class="card-header" id="advSetHeading">
+                            <h2 class="mb-0">
+                                <span>Advanced settings</span>
+                                <button class="btn btn-link float-right" type="button" data-toggle="collapse"
+                                    data-target="#advancedSettings" aria-expanded="true"
+                                    aria-controls="advancedSettings">
+                                    click
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="advancedSettings" class="collapse" aria-labelledby="advSetHeading"
+                            data-parent="#advSetAccordion">
+                            <div class="row card-body">
+                                <div class="col-md-5">
+                                    <div class="card-content">
+                                        <div class="row card-content-heading">
+                                            Playback
+                                        </div>
+                                        <div class="row">reverse</div>
+
+                                        <div class="row">
+                                                <label>Playback range</label>
+                                            <div class="slide-container">
+                                                <input type="range" min="{{ playbackRangeMin }}" max="{{ playbackRangeMax }}" value="{{ playbackRangeVal }}" class="slider"
+                                                    id="recordingPlaybackRangeSlider">
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <label>Speed multiplier</label>
+                                            <div class="slide-container">
+                                                    <input type="range" min=".025" max="3" value="{{ recordingSpeed }}"
+                                                        class="slider" id="recordingSpeedSlider">
+                                                </div>
+                                            </div>
+                                        <div class="row">
+                                            <label>Recording volume</label>
+                                            <div class="slide-container">
+                                                <input type="range" min="1" max="100" value="{{ recordingVolume }}"
+                                                    class="slider" id="recordingVolumeSlider">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card-content">
+                                        <div class="row card-content-heading">
+                                            Video Frame
+                                        </div>
+                                        <div class="row">reverse</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-content">
+                                        <div class="row card-content-heading">
+                                            Overlay
+                                        </div>
+                                        <div class="row">reverse</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

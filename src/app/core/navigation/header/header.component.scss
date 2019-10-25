@@ -1,0 +1,36 @@
+@import "src/styles/variables";
+
+.activeRouter {
+    border-bottom: 2px solid $primary-blue;
+    color: $primary-blue !important;
+}
+
+.btn-open {
+    background-color: $primary-white;
+    margin: 0 3px;
+    width: 80px;
+
+    &.btn-b {
+        border: 1px solid $primary-blue;
+        color: $primary-blue;
+    }
+    &.btn-b:hover {
+        background-color: $primary-blue;
+        color: $primary-white;
+    }
+
+    &.btn-r {
+        border: 1px solid $primary-red;
+        color: $primary-red;
+    }
+    &.btn-r:hover {
+        background-color: $primary-red;
+        color: $primary-white
+    }
+}
+
+input[type=checkbox]
+{
+  height: 30px;
+  width: 30px;
+}

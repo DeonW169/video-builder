@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" routerLink="/">video FX buidler</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="activeRouter" routerLink="/settings">
+                    <i class="fa fa-cog" aria-hidden="true"></i> Master Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="activeRouter" routerLink="/recordings">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i> Recordings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="activeRouter" routerLink="/timeline">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> Timeline</a>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <label class="check-label" for="saveSysLib">Save to system library </label>
+            <input class="check-input" type="checkbox" id="saveSysLib" value="">
+
+            <label class="check-label" for="saveLib">Save to library </label>
+            <input class="check-input" type="checkbox" id="saveLib" value="">
+        </div>
+        <div class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0 btn-open btn-r">Cancel</button>
+            <button class="btn btn-outline-success my-2 my-sm-0 btn-open btn-b">Save</button>
+        </div>
+    </div>
+</nav>
