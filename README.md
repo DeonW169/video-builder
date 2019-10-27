@@ -2,6 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
+## Environment set up - part 1
+
+Please ensure you have NodeJs installed.
+Dev environment details:
+Node - v12.10.0
+NPM - v6.11.3
+
+Browser used for testing:
+Chrome - Version 77.0.3865.120 (Official Build) (64-bit)
+
+## Environment set up - part 2
+
+After project was pulled from Git, run npm install.
+This will install all required packages.
+
+Once project is up and running, you can run ng serve. (As described below) (Development server)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
