@@ -10,21 +10,100 @@
     -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
 
+    .card-heading {
+        text-align: center;
+    }
+
     .top-section {
         height: 40px;
+
+        .top-icon {
+            font-size: 24px;
+        }
+
+        .heading {
+            padding: 0px 10px;
+        }
     }
 
     .mid-section {
         height: 80px;
+        padding: 20px;
+
+        .text {
+            padding: 2px 10px 0 5px;
+        }
+
+        .duration {
+            border: 1px solid $background-grey;
+            border-radius: 5px;
+            height: 30px;
+        }
+
     }
 
     .bottom-section {
-        background-color: $background-blue;
+        background-color: $backgroung-light-blue;
         height: 30px;
 
-        .sub-text-sm {
-            font-size: 10px
+        .bottom-icon {
+            font-size: 18px;
+            color: $primary-blue;
+            padding: 2px 12px;
         }
+    }
 
+    .sub-text-sm {
+        font-size: 10px;
+        color: $primary-blue;
+        padding: 7px 0px;
+        font-style: italic;
+    }
+
+}
+
+.add-recording-btn {
+    color: $primary-white;
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+    width:80px
+}
+
+table {
+    width: 100%;
+    overflow: scroll;
+    margin-top: 15px;
+    margin-left: 5px;
+
+    .recorded-container {
+        width: 200px;
+
+        .recorded-name {
+            border: 2px dashed $primary-blue;
+            background-color: $backgroung-light-blue;
+            border-radius: 5px;
+            height: 60px;
+
+            .name-content {
+                text-align: center;
+                padding: 5px 0px;
+                margin: 0;
+            }
+
+            .time-content {
+                margin: 0;
+                float: right;
+                padding: 0px 5px 0px 0px;
+            }
+
+            .top-right-badge {
+                float: right;
+                position: relative;
+                margin-top: -12px;
+                margin-right: -7px;
+                color: #d9534f;
+                font-size: 17px;
+            }
+        }
     }
 }

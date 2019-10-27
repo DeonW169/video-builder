@@ -1,23 +1,81 @@
 <div class="section">
     <div class="row">
         <div class="col-md-12 section-card">
-            <div class="row">
-                <div class="heading">App Recorded Video</div>
+            <div class="row bottom-border">
+                <div class="col-md-12 heading">App Recorded Video</div>
+                <div class="col-md-12 sub-heading">
+                    Play back a single video recorded by the app. This timeline clip does <i>not</i> support variable
+                    lenght recordings.
+                </div>
             </div>
-            <div class="row">
+            <div class="row ml-0 mr-0 mb-3 mt-3">
+                <div class="col-md-3 recording-selection">
+                    <div class="row">
+                        <div class="col-md-6 recording-pad">
+                            <span>Select recording</span>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control full-height" id="" ngModel="">
+                                <option>Recording 1</option>
+                                <option>Recording 2</option>
+                                <option>Recording 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 recording-selection">
+                    <div class="row">
+                        <div class="col-md-3 video-effect">
+                            <span>Add a video effect</span>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="icon video-effect-icon"><i class="fa fa-picture-o"
+                                    aria-hidden="true"></i></span>
+                            <span class="effect-text"> Glitched TV </span>
+                            <span class="effect-actions">
+                                <i class="fa fa-pencil" style="color: #4C7FD0;" aria-hidden="true"></i>
+                                <i class="fa fa-times-circle-o" style="color: #d9534f;" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-3 library">
+                            <div class="effect-library">
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                <span> Library / saved effects</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 custom">
+                            <div class="effect-custom">
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                <span> Build a custom effect</span>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
             </div>
             <div class="row">
                 <div class="accordion" id="advSetAccordion">
                     <div class="card">
                         <div class="card-header" id="advSetHeading">
                             <h2 class="mb-0">
-                                <span>Advanced settings</span>
-                                <button class="btn btn-link float-right" type="button" data-toggle="collapse"
-                                    data-target="#advancedSettings" aria-expanded="true"
-                                    aria-controls="advancedSettings">
-                                    click
-                                </button>
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <div class="row">
+                                            <div class="col-md-12 heading">Advanced Settings</div>
+                                            <div class="col-md-12 sub-heading">
+                                                Upload an overlay for your video
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-link float-right" type="button" data-toggle="collapse"
+                                            data-target="#advancedSettings" aria-expanded="true"
+                                            aria-controls="advancedSettings">
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </h2>
                         </div>
                         <div id="advancedSettings" class="collapse" aria-labelledby="advSetHeading"
@@ -26,31 +84,50 @@
                                 <div class="col-md-5">
                                     <div class="card-content">
                                         <div class="row card-content-heading">
-                                            Playback
-                                        </div>
-                                        <div class="row">reverse</div>
-
-                                        <div class="row">
-                                                <label>Playback range</label>
-                                            <div class="slide-container">
-                                                <input type="range" min="{{ playbackRangeMin }}" max="{{ playbackRangeMax }}" value="{{ playbackRangeVal }}" class="slider"
-                                                    id="recordingPlaybackRangeSlider">
+                                            <div class="col-md-12">
+                                                <span>Playback</span>
                                             </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="reverse-playback">
+                                                <span class="reverse-playback-heading">Reverse playback</span>
+                                                <input class="check-input reverse-playback-input" type="checkbox"
+                                                    id="reversePlayback" value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="mb-0">Playback range</label>
+                                            <div class="slide-container">
+                                                <input type="range" min="{{ playbackRangeMin }}"
+                                                    max="{{ playbackRangeMax }}" value="{{ playbackRangeVal }}"
+                                                    class="slider" id="recordingPlaybackRangeSlider">
+                                            </div>
+                                            <div class="col-md-1 p-0">{{ playbackRangeMin }}s</div>
+                                            <div class="col-md-10 p-0"></div>
+                                            <div class="col-md-1 p-0">{{ playbackRangeMax }}s</div>
 
                                         </div>
-                                        <div class="row">
-                                            <label>Speed multiplier</label>
+                                        <div class="row mb-3">
+                                            <label class="mb-0">Speed multiplier</label>
                                             <div class="slide-container">
-                                                    <input type="range" min=".025" max="3" value="{{ recordingSpeed }}"
-                                                        class="slider" id="recordingSpeedSlider">
-                                                </div>
+                                                <input type="range" min="0" max="3" value="{{ recordingSpeed }}"
+                                                    class="slider" id="recordingSpeedSlider">
+
                                             </div>
-                                        <div class="row">
-                                            <label>Recording volume</label>
+                                            <div class="col-md-2 p-0">0.25x</div>
+                                            <div class="col-md-9 p-0"></div>
+                                            <div class="col-md-1 p-0">3x</div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label class="mb-0">Recording volume</label>
                                             <div class="slide-container">
-                                                <input type="range" min="1" max="100" value="{{ recordingVolume }}"
+                                                <input type="range" min="0" max="100" value="{{ recordingVolume }}"
                                                     class="slider" id="recordingVolumeSlider">
                                             </div>
+                                            <div class="col-md-1 p-0">0</div>
+                                            <div class="col-md-10 p-0"></div>
+                                            <div class="col-md-1 p-0">100</div>
                                         </div>
 
                                     </div>
@@ -58,17 +135,66 @@
                                 <div class="col-md-3">
                                     <div class="card-content">
                                         <div class="row card-content-heading">
-                                            Video Frame
+                                            <div class="col-md-12">
+                                                <span>Video Frame</span>
+                                            </div>
                                         </div>
-                                        <div class="row">reverse</div>
+                                        <div class="row video-frame-label">
+                                            <label>Set Position:</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 p-0">
+                                                <label for="positionX" class="control-label">X%:</label>
+                                                <input class="form-control video-frame-input" id="positionX" />
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <label for="positionY" class="control-label">Y%:</label>
+                                                <input class="form-control video-frame-input" id="positionY" />
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <label for="rotationDeg" class="control-label">Rotation°:</label>
+                                                <input class="form-control video-frame-input" id="rotationDeg" />
+                                            </div>
+                                        </div>
+                                        <div class="row video-frame-label">
+                                            <label>Set Size:</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 p-0">
+                                                <label for="sizeWidth" class="control-label">Width%:</label>
+                                                <input class="form-control video-frame-input" id="sizeWidth" />
+                                            </div>
+                                            <div class="col-md-4 p-0">
+                                                <label for="sizeHeight" class="control-label">Height%:</label>
+                                                <input class="form-control video-frame-input" id="sizeHeight" />
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card-content">
                                         <div class="row card-content-heading">
-                                            Overlay
+                                            <div class="col-md-12">
+                                                <span>Overlay</span>
+                                            </div>
                                         </div>
-                                        <div class="row">reverse</div>
+                                        <div class="row blend-mode">
+                                            <div class="col-md-6 blend-heading">
+                                                <span>Blend Mode</span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="" ngModel="">
+                                                    <option>Normal</option>
+                                                    <option>Fade</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="file-upload-wrapper">
+                                                <input type="file" id="input-file-now" class="file-upload" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

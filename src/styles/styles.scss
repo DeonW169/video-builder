@@ -8,17 +8,9 @@ body {
 }
 
 body {
-  background-color: $background-blue;
+  background-color: $background-light-grey;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }

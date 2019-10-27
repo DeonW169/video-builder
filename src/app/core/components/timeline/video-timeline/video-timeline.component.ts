@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-timeline.component.scss']
 })
 export class VideoTimelineComponent implements OnInit {
+  recordedVideos = [
+    { id: 1, name: 'App Recorded Video', time: '2s' },
+    { id: 2, name: 'App Recorded Video', time: '1s' },
+    { id: 3, name: 'App Recorded Video', time: '3s' }
+
+  ]
 
   constructor() { }
 
